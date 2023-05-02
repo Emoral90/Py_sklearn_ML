@@ -28,3 +28,7 @@ print(f"This is the data now fitted:\n{fitment}")
 # Now you can predict new values by using the predict() method with the data attribute of the dataset
 prediction = clf.predict(digits.data[-1:])
 print(f"This is the prediction:\n{prediction}")
+
+'''
+Since this dataset uses a matrix of values representing how dark each low resolution pixel is (Higher value = darker pixel), this matrix was fitted and predicted to output a 
+'''
