@@ -19,5 +19,12 @@ print(f"This is the 2d array of digits:\n{digits.images[0]}") # will show the FU
 # Import the estimator class that implements support the vector classification or svm
 from sklearn import svm
 clf = svm.SVC(gamma=.001, C=100.) # clf meaning classifier
+
 # Now fit the training dataset to the fit method
-    # Training set referring to the 
+    # Training set referring to the data and target attributes of the loaded dataset
+fitment = clf.fit(digits.data[:-1], digits.target[:-1]) # [:-1] does is makes a new array that contains everything minus the last item
+print(f"This is the data now fitted:\n{fitment}")
+
+# Now you can predict new values by using the predict() method with the data attribute of the dataset
+prediction = clf.predict(digits.data[-1:])
+print(f"This is the prediction:\n{prediction}")
